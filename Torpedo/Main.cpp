@@ -11,6 +11,7 @@ int main(){
 	system("cls");
 	cout << nev1 << " sajat tablaja:\n\n";
 	tabla1.kiRajzol();
+	tabla1.kiRajzol();
 
 	
 
