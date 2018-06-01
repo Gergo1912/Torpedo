@@ -9,16 +9,15 @@ Tabla::Tabla(int meret) : meret(meret){
 		for (int j = 0; j < meret; j++){
 			tabla[i][j] = ' ';
 		}
-	}
-	tabla[5][5] = 'X';
+	}	
 }
 
 void Tabla::kiRajzol(){
-	int szam = 1;
-	cout << "  | A | B | C | D | E | F | G | H | I | J |\n";
+	int szam = 0;
+	cout << " | A | B | C | D | E | F | G | H | I | J |\n";
 	for (int i = 0; i < meret; i++){
-		cout << "-------------------------------------------\n";
-		cout << setw(2) << right << szam << "| ";
+		cout << "------------------------------------------\n";
+		cout << szam << "| ";
 		szam++;		
 		for (int j = 0; j < meret; j++){			
 			cout << tabla[i][j] <<" | ";
@@ -26,7 +25,7 @@ void Tabla::kiRajzol(){
 		cout<<"\n";
 		
 	}
-	cout << "-------------------------------------------\n";
+	cout << "------------------------------------------\n";
 }
 Tabla::~Tabla(){
 	for (int i = 0; i < meret; i++) {

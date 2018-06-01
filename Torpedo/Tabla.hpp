@@ -2,7 +2,6 @@
 #define TABLA_HPP
 
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 class Tabla{

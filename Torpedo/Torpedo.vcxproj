@@ -76,10 +76,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Jatekos.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Tabla.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Jatekos.hpp" />
     <ClInclude Include="Tabla.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
