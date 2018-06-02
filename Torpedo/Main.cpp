@@ -1,12 +1,10 @@
-#include <iostream>
 #include "Tabla.hpp"
 #include "Jatekos.hpp"
 #include "Hajo.hpp"
 #include <string>
 using namespace std;
 
-int main(){	
-
+int main(){
 	string nev;	
 	bool ok=false, helyesbekeres;
 	int mod, sorszam=0;
@@ -27,11 +25,22 @@ int main(){
 				helyesbekeres = jatekos1.bekerHajo(sorszam);
 				if (helyesbekeres) sorszam++;
 			} while (sorszam < 5);
-			
+			system("cls");
+			sorszam = 0;
+			cout << "Adja meg az elso jatekos nevet:\t";
+			cin >> nev;
+			Jatekos jatekos2(nev);
+			system("cls");
+			do{
+				helyesbekeres = jatekos2.bekerHajo(sorszam);
+				if (helyesbekeres) sorszam++;
+			} while (sorszam < 5);
+			/*
 			cout << jatekos1.getNev() << " sajat tablaja:\n\n";
 			jatekos1.getSajatTabla();
 			cout << " Ellenfel tablaja:\n\n";
 			jatekos1.getEllenTabla();
+			*/
 
 			ok = true;
 			

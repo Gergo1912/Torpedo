@@ -18,7 +18,7 @@ bool Jatekos::bekerHajo(int sorszam){
 	char irany, betuoszlop;
 	char betomb[7];
 	hajomeretKiiras(sorszam);
-	cout << "Tegye fel a hajot a tablara. Adja meg a hajo kezdo poziciojat valamint az iranyat(v:vizszintes, f:fuggoleges). Egy pelda: A0v\n\n";
+	cout << "Tegye fel a hajot a tablara. Adja meg a hajo kezdo poziciojat valamint az iranyat(v:vizszintes, f:fuggoleges). Egy pelda: A0v\n";
 	//cout << "Tegye fel a hajot a tablara. Meg kell adnia a hajo kezdo poziciojat, iranyat, vagyis milyen iranyban kerul fel a tablara (v:vizszintes, f:fuggoleges)Pelda: A0v)\n";
 	cin >> betomb;
 	if (formaiEllenorzes(betomb)){
@@ -29,6 +29,10 @@ bool Jatekos::bekerHajo(int sorszam){
 			oszlop = oszlopAlakito(betuoszlop);
 			hajok[sorszam] = Hajo(oszlop, sor, irany);
 			hajok[sorszam].setMeret(sorszam+1);
+			if (!sajattabla->setTabla(oszlop, sor, irany, hajok[sorszam].GetMeret())){
+				return false;
+			}
+			sajattabla->kiRajzol();
 			return true;
 		}
 		return false;
@@ -65,15 +69,15 @@ bool Jatekos::formaiEllenorzes(char betomb[]){
 bool Jatekos::tartalmiEllenorzes(char betuoszlop, int sor, char irany){
 	if (!isalpha(betuoszlop) || betuoszlop != 'A' && betuoszlop != 'B' && betuoszlop != 'C' && betuoszlop != 'D' && betuoszlop != 'E' && betuoszlop != 'F' && betuoszlop != 'G' && betuoszlop != 'H'
 		&& betuoszlop != 'I' && betuoszlop != 'J'){
-		printf("Az elso karakter nem megfelelo! Adja meg ujra\n\n");
+		printf("Az elso karakter nem megfelelo! Adja meg ujra!\n\n");
 		return false;
 	}
 	else if (sor > 9 || sor < 0){
-		printf("A masodik karakter nem megfelelo! Adja meg ujra\n\n");
+		printf("A masodik karakter nem megfelelo! Adja meg ujra!\n\n");
 		return false;
 	}
 	else if (irany != 'v' && irany != 'f'){
-		printf("A harmadik karakter nem megfelelo! Adja meg ujra\n\n");
+		printf("A harmadik karakter nem megfelelo! Adja meg ujra!\n\n");
 		return false;
 	}	
 	return true;

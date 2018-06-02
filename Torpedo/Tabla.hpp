@@ -13,6 +13,7 @@ class Tabla{
 		Tabla(int meret);
 		~Tabla();
 		void kiRajzol();
+		bool setTabla(int oszlop, int sor, char irany, int meret);
 };
 
 #endif

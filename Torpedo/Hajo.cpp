@@ -15,4 +15,8 @@ void Hajo::setMeret(int sorszam){
 	meret = sorszam;
 }
 
+int Hajo::GetMeret(){
+	return meret;
+}
+
 Hajo::~Hajo(){}

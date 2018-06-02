@@ -19,6 +19,7 @@ class Hajo{
 		int GetOszlop();
 		void setTalalat();
 		void setMeret(int meret);
+		int Hajo::GetMeret();
 };
 
 #endif
