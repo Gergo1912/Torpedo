@@ -24,12 +24,18 @@
     <ClCompile Include="Jatekos.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Hajo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Tabla.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="Jatekos.hpp">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Hajo.hpp">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
